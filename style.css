@@ -5,13 +5,18 @@
 
 .logo {
     background-image: url(pics/logo.png);
-    width: 15vw;
+    width: 50px;
     height: 10vh;
     background-size: contain;
+    background-repeat: no-repeat;
 }
 
 .left {
     display: flex;
+}
+
+.tagline {
+    margin-top: 3vh;
 }
 
 .rigth {
@@ -21,14 +26,34 @@
 header {
     display: flex;
     justify-content: space-between;
+    background-color: #5d5d5d;
 }
 
 .search {
     padding: 3vw;
     border-color: black;
     border: 1px;
+
 }
 
+footer {
+    background-color: #5d5d5d;
+    display: flex;
+    justify-content: space-between;
+}
+
+#om_os {
+    display: flex;
+    flex-direction: column;
+
+}
+
+.facebook {
+    background-image: url(pics/facebook.png);
+    width: 5vw;
+    height: 4vh;
+    background-size: contain;
+}
 
 
 /*-------brugermenu--------*/
@@ -44,7 +69,7 @@ header {
     flex-wrap: wrap;
     width: 35px;
     height: 5px;
-    background-color: #575757;
+    background-color: #000000;
     margin: 6px 0;
     transition: 0.4s;
 
