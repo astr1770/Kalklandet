@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+
+<body>
+
+    <header>
+        <div class="left">
+            <div class="logo"></div>
+            <div class="tagline">- En del af Østsjællands Museum</div>
+        </div>
+        <div class="rigth">
+            <div class="search">Søg</div>
+            <div class="burgermenu">
+                <div class="box hide">
+                    <div class="ned_menu">
+                        <a href="#koldkrigsmuseum">Koldkrigsmuseet</a>
+                        <a href="#stevnsklint">Stevns Klint</a>
+                        <a href="#geomuseetfaxe">Goemuseet Faxe</a>
+                        <a href="#viden">Viden</a>
+                    </div>
+                </div>
+                <div class="bar1"></div>
+                <div class="bar2"></div>
+                <div class="bar3"></div>
+            </div>
+        </div>
+    </header>
+
+
+
+
+
+    <Footer>
+        <div class="kontakt">
+            <div></div>
+            <div class="facebook"></div>
+            <div class="instagram"></div>
+        </div>
+        <div id="om os">
+            <a href="historie">Historie</a>
+            <a href="hvem er vi">Hvem er vi?</a>
+            <a href="vores opgaver">Vores opgaver</a>
+            <a href="vores resultater">Vores resultater</a>
+            <a href="ledige stillinger">Ledige stillinger</a>
+        </div>
+    </Footer>
+
+    <script>
+        window.addEventListener("load", sidenVises);
+
+        function sidenVises() {
+            console.log("siden vises");
+            //Hvad der skal ske
+            showStart();
+        }
+
+        function showStart() {
+            console.log("burgermenu");
+            document.querySelector(".burgermenu").addEventListener("click", visMenu);
+
+        }
+
+        function visMenu() {
+            console.log("menufremme");
+            document.querySelector(".box").classList.toggle("hide");
+            document.querySelector(".burgermenu").classList.toggle("change");
+            document.querySelector(".burgermenu").addEventListener("click", showStart);
+        }
+
+    </script>
+</body>
+
+</html>
