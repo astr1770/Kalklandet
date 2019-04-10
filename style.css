@@ -4,6 +4,8 @@
 
 }
 
+
+
 /*header*/
 .logo {
     background-image: url(pics/logo.png);
@@ -32,9 +34,9 @@ header {
 }
 
 .search {
-    padding: 3vw;
+    padding: 20px 20px 0 0;
     border-color: black;
-    border: 1px;
+    border: 2px;
 
 }
 
@@ -72,6 +74,31 @@ header {
 .change .bar3 {
     transform: rotate(45deg) translate(-8px, -8px);
     transform: rotate(45deg) translate(-8px, -8px);
+}
+
+.box {
+    position: absolute;
+    justify-content: flex-end;
+    height: 200px;
+    width: 200px;
+    background-color: rgba(255, 255, 255, 0.88);
+}
+
+
+.ned_menu {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    margin: 5vw;
+
+}
+
+.ned_menu a {
+    font-size: 1.1rem;
+    margin: 0.25rem;
+    padding: 0.25rem;
+    text-decoration: none;
+    color: black;
 }
 
 /*splash billede*/
@@ -122,7 +149,7 @@ header {
 
 }
 
-/*desktop*/
+/* media desktop*/
 
 @media only screen and (min-width:725px) {
 
@@ -166,6 +193,3 @@ footer {
     height: 4vh;
     background-size: contain;
 }
-
-
-/*media quory*/
