@@ -81,7 +81,7 @@ header {
     display: flex;
     background-color: gainsboro;
     width: 100vw;
-    height: 50vh;
+    height: 60vh;
     justify-content: center;
 }
 
@@ -97,22 +97,54 @@ header {
     display: flex;
     background-color: #bababa;
     width: 100vw;
-    height: 30vh;
+    height: 40vh;
+
 }
 
 .klint {
     display: flex;
     background-color: #bababa;
     width: 100vw;
-    height: 30vh;
+    height: 40vh;
 }
 
 .kalkbrud {
     display: flex;
     background-color: #bababa;
     width: 100vw;
-    height: 30vh;
+    height: 40vh;
 }
+
+.viden {
+    background-color: #bababa;
+    width: 100vw;
+    height: 20vh;
+
+}
+
+/*desktop*/
+
+@media only screen and (min-width:725px) {
+
+    #forsidemenu {
+        display: flex;
+        justify-content: space-around
+    }
+
+    .kalkbrud {
+        display: flex;
+    }
+
+    .klint {
+        display: flex;
+    }
+
+    .koldkrig {
+        display: flex;
+    }
+
+}
+
 
 /*footer*/
 
@@ -134,3 +166,6 @@ footer {
     height: 4vh;
     background-size: contain;
 }
+
+
+/*media quory*/
