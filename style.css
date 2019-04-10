@@ -1,8 +1,10 @@
+/*basic*/
 * {
     margin: 0;
 
 }
 
+/*header*/
 .logo {
     background-image: url(pics/logo.png);
     width: 50px;
@@ -35,26 +37,6 @@ header {
     border: 1px;
 
 }
-
-footer {
-    background-color: #5d5d5d;
-    display: flex;
-    justify-content: space-between;
-}
-
-#om_os {
-    display: flex;
-    flex-direction: column;
-
-}
-
-.facebook {
-    background-image: url(pics/facebook.png);
-    width: 5vw;
-    height: 4vh;
-    background-size: contain;
-}
-
 
 /*-------brugermenu--------*/
 
@@ -90,4 +72,65 @@ footer {
 .change .bar3 {
     transform: rotate(45deg) translate(-8px, -8px);
     transform: rotate(45deg) translate(-8px, -8px);
+}
+
+/*splash billede*/
+
+
+.splash {
+    display: flex;
+    background-color: gainsboro;
+    width: 100vw;
+    height: 50vh;
+    justify-content: center;
+}
+
+.logotype {
+    align-self: center;
+
+}
+
+
+/*hovedmenu*/
+
+.koldkrig {
+    display: flex;
+    background-color: #bababa;
+    width: 100vw;
+    height: 30vh;
+}
+
+.klint {
+    display: flex;
+    background-color: #bababa;
+    width: 100vw;
+    height: 30vh;
+}
+
+.kalkbrud {
+    display: flex;
+    background-color: #bababa;
+    width: 100vw;
+    height: 30vh;
+}
+
+/*footer*/
+
+footer {
+    background-color: #5d5d5d;
+    display: flex;
+    justify-content: space-between;
+}
+
+#om_os {
+    display: flex;
+    flex-direction: column;
+
+}
+
+.facebook {
+    background-image: url(pics/facebook.png);
+    width: 5vw;
+    height: 4vh;
+    background-size: contain;
 }
