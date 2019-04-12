@@ -27,10 +27,10 @@
             <div class="burgermenu">
                 <div class="box hide">
                     <div class="ned_menu">
-                        <a href="#koldkrig">Koldkrigsmuseet</a>
+                        <a href="koldkrig.html">Koldkrigsmuseet</a>
                         <a href="#klint">Stevns Klint</a>
                         <a href="#kalkbrud">Goemuseet Faxe</a>
-                        <a href="#viden">Viden</a>
+                        <a href="viden.html">Viden</a>
                     </div>
                 </div>
                 <div class="bar1"></div>
@@ -41,9 +41,21 @@
     </header>
 
     <div class="splash">
-        <div class="logotype">
-            <h1>Kalklandet</h1>
-        </div>
+        <img src="" alt="">
+        <a href="koldkrig.html">
+            <div class="overskrift"></div>
+        </a>
+    </div>
+
+    <div class="menu">
+
+        <a href="koldkrig_besoeg.html">Besøg os</a>
+        <a href="koldkrig_priser.html">Priser og guidede ture</a>
+        <a href="koldkrig_undervisning.html">Undervisning</a>
+    </div>
+
+    <div class="om_koldkrigsmuseet">
+        <p></p>
     </div>
 
 
@@ -70,7 +82,29 @@
     </Footer>
 
     <script>
-        window.addEventListener("load", sidenVises);
+        let splash;
+        document.addEventListener("DOMContentLoaded", start);
+
+        function start() {
+
+            async function getJson() {
+                let url = "http://astridhostrup.dk/kea/07-cms/kalklandet/wp/wp-json/wp/v2/koldkrigsmuseum/194";
+                let jsonData = await fetch(url);
+                splash = await jsonData.json();
+                console.log(splash)
+                visSplash();
+            }
+
+            function visSplash() {
+                document.querySelector(".overskrift").textContent = splash.title.rendered;
+                document.querySelector(".splash").style.backgroundImage = "url(" + splash.koldkrigsmuseum_billede.guid + ")"
+                document.querySelector(".om_koldkrigsmuseet p").textContent = splash.om_koldkrigsmuseet;
+
+            }
+
+            getJson();
+
+        }
 
         function sidenVises() {
             console.log("siden vises");
@@ -90,7 +124,6 @@
             document.querySelector(".burgermenu").classList.toggle("change");
             document.querySelector(".burgermenu").addEventListener("click", showStart);
         }
-
     </script>
 </body>
 

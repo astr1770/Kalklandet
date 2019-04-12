@@ -4,6 +4,8 @@
 
 }
 
+img {}
+
 a {
     text-decoration: none;
     color: black;
@@ -120,12 +122,17 @@ header {
     display: flex;
     background-color: gainsboro;
     width: 100vw;
-    height: 70vh;
     justify-content: center;
+    height: 90vh;
+    background-size: cover;
 }
 
-.logotype {
+.overskrift {
     align-self: center;
+    font-size: 5rem;
+    color: white;
+    padding-top: 30vh;
+    font-family: sans-serif;
 
 }
 
@@ -136,29 +143,62 @@ header {
     display: flex;
     background-color: #bababa;
     width: 100vw;
-    height: 40vh;
-
+    height: 60vh;
+    background-size: cover;
 }
 
 .klint {
     display: flex;
     background-color: #bababa;
     width: 100vw;
-    height: 40vh;
+    height: 60vh;
+    background-size: cover;
 }
 
 .kalkbrud {
     display: flex;
     background-color: #bababa;
     width: 100vw;
-    height: 40vh;
+    height: 60vh;
+    background-size: cover;
 }
 
 .viden {
     background-color: #bababa;
     width: 100vw;
-    height: 20vh;
+    height: 70vh;
+    background-size: cover;
+    display: flex;
 
+}
+
+.koldkrigsmuseum_overskrift {
+    font-size: 2rem;
+    color: white;
+    padding: 53vh 0 0 2vw;
+    font-family: sans-serif;
+}
+
+.klint_overskrift {
+    font-size: 2rem;
+    color: white;
+    padding: 53vh 0 0 2vw;
+    font-family: sans-serif;
+}
+
+.kalkbrud_overskrift {
+    font-size: 2rem;
+    color: white;
+    padding: 53vh 0 0 2vw;
+    font-family: sans-serif;
+}
+
+.viden_overskrift {
+    align-self: center;
+    font-size: 4rem;
+    color: white;
+    padding: 60vh 0 0 2vw;
+    font-family: sans-serif;
 }
 
 /* media desktop*/

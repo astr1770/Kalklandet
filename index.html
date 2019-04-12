@@ -41,33 +41,38 @@
     </header>
 
     <div class="splash">
-        <div class="logotype">
-            <h1>Kalklandet</h1>
-        </div>
+        <img src="" alt="">
+        <a href="index.html">
+            <div class="overskrift"></div>
+        </a>
     </div>
 
     <nav>
         <div id="forsidemenu">
             <div class="koldkrig">
-                <div class="menutekst">
-                    <h1>Koldkrigsmuseet</h1>
-                </div>
+                <img src="" alt="">
+                <a href="koldkrig.html">
+                    <div class="koldkrigsmuseum_overskrift"></div>
+                </a>
             </div>
             <div class="klint">
-                <div class="menutekst">
-                    <h1>Stevns Klint</h1>
-                </div>
+                <img src="" alt="">
+                <a href="klint.html">
+                    <div class="klint_overskrift"></div>
+                </a>
             </div>
             <div class="kalkbrud">
-                <div class="menutekst">
-                    <h1>Goemuseet Faxe</h1>
-                </div>
+                <img src="" alt="">
+                <a href="faxe.html">
+                    <div class="kalkbrud_overskrift"></div>
+                </a>
             </div>
         </div>
         <div class="viden">
-            <div class="menutekst">
-                <h1>Viden</h1>
-            </div>
+            <img src="" alt="">
+            <a href="viden.html">
+                <div class="viden_overskrift"></div>
+            </a>
         </div>
     </nav>
 
@@ -95,7 +100,36 @@
     </Footer>
 
     <script>
-        window.addEventListener("load", sidenVises);
+        let splash;
+        document.addEventListener("DOMContentLoaded", start);
+
+        function start() {
+
+            async function getJson() {
+                let url = "http://astridhostrup.dk/kea/07-cms/kalklandet/wp/wp-json/wp/v2/forside/184";
+                let jsonData = await fetch(url);
+                splash = await jsonData.json();
+                console.log(splash)
+                visSplash();
+            }
+
+            function visSplash() {
+                document.querySelector(".overskrift").textContent = splash.title.rendered;
+                document.querySelector(".splash").style.backgroundImage = "url(" + splash.splash.guid + ")"
+                document.querySelector(".koldkrigsmuseum_overskrift").textContent = splash.koldkrigsmuseum_overskrift;
+                document.querySelector(".koldkrig").style.backgroundImage = "url(" + splash.koldkrigsmuseum_billede.guid + ")"
+                document.querySelector(".klint_overskrift").textContent = splash.klint_overskrift;
+                document.querySelector(".klint").style.backgroundImage = "url(" + splash.klint_billede.guid + ")"
+                document.querySelector(".kalkbrud_overskrift").textContent = splash.kalkbrud_overskrift;
+                document.querySelector(".kalkbrud").style.backgroundImage = "url(" + splash.kalkbrud_billede.guid + ")"
+                document.querySelector(".viden_overskrift").textContent = splash.viden_overskrift;
+                document.querySelector(".viden").style.backgroundImage = "url(" + splash.viden_billede.guid + ")"
+
+            }
+
+            getJson();
+
+        }
 
         function sidenVises() {
             console.log("siden vises");
