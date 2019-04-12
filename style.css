@@ -4,7 +4,10 @@
 
 }
 
-
+a {
+    text-decoration: none;
+    color: black;
+}
 
 /*header*/
 .logo {
@@ -101,6 +104,15 @@ header {
     color: black;
 }
 
+.ned_menu a:hover {
+    text-decoration: none;
+    color: white;
+}
+
+.burgermenu {
+    cursor: pointer;
+}
+
 /*splash billede*/
 
 
@@ -172,6 +184,63 @@ header {
 
 }
 
+/*viden*/
+#viden_menu {
+    display: flex;
+    justify-content: space-between;
+    padding: 2vw;
+}
+
+.kasse {
+    width: 100vw;
+    height: 40vh;
+}
+
+.kulturhistorie_billede {
+    background-color: aliceblue;
+}
+
+
+/*------------menu---------*/
+
+.menu {
+    display: flex;
+    justify-content: space-around;
+}
+
+.menu a {
+    color: black;
+    text-decoration: none;
+
+}
+
+
+/*------------tekst og knap---------*/
+
+.tekst_knap {}
+
+.knap {
+    text-align: center;
+
+}
+
+.knap img {
+    width: 50vw;
+}
+
+
+/*---------- media queries ------------*/
+
+/*-------- Desktop ---------*/
+
+
+@media screen and (min-width: 1200px) {
+
+    .tekst_knap {
+        display: flex;
+    }
+
+}
 
 /*footer*/
 
@@ -179,6 +248,7 @@ footer {
     background-color: #5d5d5d;
     display: flex;
     justify-content: space-between;
+    padding: 5vw;
 }
 
 #om_os {
@@ -187,9 +257,24 @@ footer {
 
 }
 
+#om_os p {
+    font-size: 1.2rem;
+}
+
+#om_os a {
+    text-decoration: none;
+    color: black;
+}
+
+#om_os a:hover {
+    text-decoration: none;
+    color: white;
+}
+
 .facebook {
     background-image: url(pics/facebook.png);
     width: 5vw;
     height: 4vh;
     background-size: contain;
+    margin: 3px;
 }

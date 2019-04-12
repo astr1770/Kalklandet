@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+
+<body>
+
+    <header>
+        <div class="left">
+            <div class="logo"></div>
+            <div class="tagline">
+                <a href="index.html">
+                    <p>- En del af Østsjællands Museum</p>
+                </a>
+            </div>
+        </div>
+        <div class="rigth">
+            <div class="search">
+                <p>Søg</p>
+            </div>
+            <div class="burgermenu">
+                <div class="box hide">
+                    <div class="ned_menu">
+                        <a href="#koldkrig">Koldkrigsmuseet</a>
+                        <a href="#klint">Stevns Klint</a>
+                        <a href="#kalkbrud">Goemuseet Faxe</a>
+                        <a href="#viden">Viden</a>
+                    </div>
+                </div>
+                <div class="bar1"></div>
+                <div class="bar2"></div>
+                <div class="bar3"></div>
+            </div>
+        </div>
+    </header>
+
+    <div class="splash">
+        <div class="logotype">
+            <h1>Kalklandet</h1>
+        </div>
+    </div>
+
+    <div class="menu">
+
+        <a href="besoeg.html">Besøg os</a>
+        <a href="priser.html">Priser og guidede ture</a>
+        <a href="undervisning.html">Undervisning</a>
+
+
+    </div>
+
+    <div class="tekst_knap">
+
+        <div class="tekst">
+
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo molestias necessitatibus fugit asperiores rem doloribus iure quod possimus. Perspiciatis deleniti eos voluptates odio dolores? Doloremque modi ratione ipsum aperiam expedita.</p>
+
+        </div>
+
+        <div class="knap">
+
+            <img src="pics/book_knap.svg">
+
+        </div>
+
+    </div>
+
+
+    <Footer>
+        <div class="kontakt">
+            <div>Østsjællands Museum <br>
+                Rådhusvej 2 <br>
+                4640 Faxe <br>
+                museum@oesm.dk <br>
+                +45 56502806 <br>
+                Telefontid: hverdage kl. 9-15
+            </div>
+            <div class="facebook"></div>
+            <div class="instagram"></div>
+        </div>
+        <div id="om_os">
+            <p>Om os</p>
+            <a href="historie">Historie</a>
+            <a href="hvem er vi">Hvem er vi?</a>
+            <a href="vores opgaver">Vores opgaver</a>
+            <a href="vores resultater">Vores resultater</a>
+            <a href="ledige stillinger">Ledige stillinger</a>
+        </div>
+    </Footer>
+
+    <script>
+        window.addEventListener("load", sidenVises);
+
+        function sidenVises() {
+            console.log("siden vises");
+            //Hvad der skal ske
+            showStart();
+        }
+
+        function showStart() {
+            console.log("burgermenu");
+            document.querySelector(".burgermenu").addEventListener("click", visMenu);
+
+        }
+
+        function visMenu() {
+            console.log("menufremme");
+            document.querySelector(".box").classList.toggle("hide");
+            document.querySelector(".burgermenu").classList.toggle("change");
+            document.querySelector(".burgermenu").addEventListener("click", showStart);
+        }
+    </script>
+</body>
+
+</html>
