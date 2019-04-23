@@ -54,18 +54,26 @@
         <a href="koldkrig_undervisning.html">Undervisning</a>
     </div>
 
-    <div class="aabningstider">
+    <div class="intro_tekst">
         <p></p>
     </div>
     <br>
-    <div class="handicappet">
+    <div class="priser">
         <p></p>
     </div>
-<br>
+    <br>
     <div class="find_vej">
         <p></p>
     </div>
-    <div class="om_koldkrigsmuseet">
+    <div class="paa_egen_haand">
+        <p></p>
+    </div>
+    <br>
+    <div class="for_grupper">
+        <p></p>
+    </div>
+    <br>
+    <div class="sraelige_ture">
         <p></p>
     </div>
 
@@ -99,7 +107,7 @@
         function start() {
 
             async function getJson() {
-                let url = "http://astridhostrup.dk/kea/07-cms/kalklandet/wp/wp-json/wp/v2/koldkrig_priser/200";
+                let url = "http://astridhostrup.dk/kea/07-cms/kalklandet/wp/wp-json/wp/v2/koldkrig_priser/213";
                 let jsonData = await fetch(url);
                 splash = await jsonData.json();
                 console.log(splash)
@@ -108,11 +116,13 @@
 
             function visSplash() {
                 document.querySelector(".overskrift").textContent = splash.title.rendered;
-                document.querySelector(".splash").style.backgroundImage = "url(" + splash.koldkrigsmuseum_billede.guid + ")"
-                document.querySelector(".aabningstider p").textContent = splash.aabningstider;
-                document.querySelector(".handicappet p").textContent = splash.handicappet;
-                document.querySelector(".find_vej p").textContent = splash.find_vej;
-                document.querySelector(".om_koldkrigsmuseet p").textContent = splash.om_koldkrigsmuseet;
+                document.querySelector(".splash").style.backgroundImage = "url(" + splash.pris_billede.guid + ")"
+                document.querySelector(".intro_tekst p").textContent = splash.intro_tekst;
+                document.querySelector(".priser p").textContent = splash.priser;
+                document.querySelector(".ekstra_kommentar p").textContent = splash.ekstra_kommentar;
+                document.querySelector(".paa_egen_haand p").textContent = splash.paa_egen_haand;
+                document.querySelector(".for_grupper p").textContent = splash.for_grupper;
+                document.querySelector(".sraelige_ture p").textContent = splash.sraelige_ture;
 
             }
 

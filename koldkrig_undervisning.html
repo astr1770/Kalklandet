@@ -54,10 +54,13 @@
         <a href="koldkrig_undervisning.html">Undervisning</a>
     </div>
 
-    <div class="aabningstider">
+    <div class="kort_intro">
         <p></p>
     </div>
 
+    <div class="handicappet">
+        <p></p>
+    </div>
 
     <Footer>
         <div class="kontakt">
@@ -88,7 +91,7 @@
         function start() {
 
             async function getJson() {
-                let url = "http://astridhostrup.dk/kea/07-cms/kalklandet/wp/wp-json/wp/v2/koldkrigsmuseum/194";
+                let url = "http://astridhostrup.dk/kea/07-cms/kalklandet/wp/wp-json/wp/v2/koldkrigs_undervisni/212";
                 let jsonData = await fetch(url);
                 splash = await jsonData.json();
                 console.log(splash)
@@ -97,14 +100,16 @@
 
             function visSplash() {
                 document.querySelector(".overskrift").textContent = splash.title.rendered;
-                document.querySelector(".splash").style.backgroundImage = "url(" + splash.koldkrigsmuseum_billede.guid + ")"
-                document.querySelector(".aabningstider p").textContent = splash.aabningstider;
+                document.querySelector(".splash").style.backgroundImage = "url(" + splash.undervisning_billede.guid + ")"
+                document.querySelector(".kort_intro p").textContent = splash.kort_intro;
 
             }
 
             getJson();
 
         }
+
+
 
         function sidenVises() {
             console.log("siden vises");

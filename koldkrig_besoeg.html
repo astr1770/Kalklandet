@@ -53,20 +53,72 @@
         <a href="koldkrig_priser.html">Priser og guidede ture</a>
         <a href="koldkrig_undervisning.html">Undervisning</a>
     </div>
+    <div class="indhold">
+        <div class="overskrift_aabningstider">
+            <h2></h2>
+        </div>
+        <br>
+        <div class="aabningstider">
+            <p></p>
+        </div>
+        <br>
+        <div class="overskrift_saerlige_aabningstider">
+            <h3></h3>
+        </div>
+        <br>
+        <div class="saerlige_aabningstider">
+            <p></p>
+        </div>
+        <br>
+        <div class="handicappet_overskrift">
+            <h2></h2>
+        </div>
+        <br>
+        <div class="underoverskrift_gangbesvaer_syn">
+            <h3></h3>
+        </div>
+        <br>
+        <div class="info_gangbesvaer_syn">
+            <p></p>
+        </div>
+        <br>
+        <div class="find_vej_overskrift">
+            <h2></h2>
+        </div>
+        <br>
+        <div class="find_vej_info">
+            <p></p>
+        </div>
+        <br>
+        <div class="med_tog_overskrift">
+            <h3></h3>
+        </div>
+        <br>
+        <div class="info_med_tog">
+            <p></p>
+        </div>
+        <br>
+        <div class="i_bil_overskrift">
+            <h3></h3>
+        </div>
+        <br>
+        <div class="i_bil_info">
+            <p></p>
+        </div>
+        <br>
+        <div class="overnatning_overskrift">
+            <h3></h3>
+        </div>
+        <br>
+        <div class="overnatning_info">
+            <p></p>
+        </div>
+        <br>
+        <div id="map">
 
-    <div class="aabningstider">
-        <p></p>
-    </div>
-    <br>
-    <div class="handicappet">
-        <p></p>
-    </div>
-    <br>
-    <div class="find_vej">
-        <p></p>
-    </div>
-    <div class="om_koldkrigsmuseet">
-        <p></p>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2248.0000447732755!2d12.536941315928765!3d55.70637098054099!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xfb49444f2d16c1a6!2sKea!5e0!3m2!1sda!2sdk!4v1554841474335!5m2!1sda!2sdk" width="350" height="200" frameborder="0" style="border:0" allowfullscreen></iframe>
+
+        </div>
     </div>
 
 
@@ -109,10 +161,21 @@
             function visSplash() {
                 document.querySelector(".overskrift").textContent = splash.title.rendered;
                 document.querySelector(".splash").style.backgroundImage = "url(" + splash.besoeg_billede.guid + ")"
+                document.querySelector(".overskrift_aabningstider h2").textContent = splash.overskrift_aabningstider;
                 document.querySelector(".aabningstider p").textContent = splash.aabningstider;
-                document.querySelector(".handicappet p").textContent = splash.handicappet;
-                document.querySelector(".find_vej p").textContent = splash.find_vej;
-                document.querySelector(".om_koldkrigsmuseet p").textContent = splash.om_koldkrigsmuseet;
+                document.querySelector(".overskrift_saerlige_aabningstider h3").textContent = splash.overskrift_saerlige_aabningstider;
+                document.querySelector(".saerlige_aabningstider p").textContent = splash.saerlige_aabningstider;
+                document.querySelector(".handicappet_overskrift h2").textContent = splash.handicappet_overskrift;
+                document.querySelector(".underoverskrift_gangbesvaer_syn h3").textContent = splash.underoverskrift_gangbesvaer_syn;
+                document.querySelector(".info_gangbesvaer_syn p").textContent = splash.info_gangbesvaer_syn;
+                document.querySelector(".find_vej_overskrift h2").textContent = splash.find_vej_overskrift;
+                document.querySelector(".find_vej_info p").textContent = splash.find_vej_info;
+                document.querySelector(".med_tog_overskrift h3").textContent = splash.med_tog_overskrift;
+                document.querySelector(".info_med_tog p").textContent = splash.info_med_tog;
+                document.querySelector(".i_bil_overskrift h3").textContent = splash.i_bil_overskrift;
+                document.querySelector(".i_bil_info p").textContent = splash.i_bil_info;
+                document.querySelector(".overnatning_overskrift h3").textContent = splash.overnatning_overskrift;
+                document.querySelector(".overnatning_info p").textContent = splash.overnatning_info;
 
             }
 
@@ -138,6 +201,7 @@
             document.querySelector(".burgermenu").classList.toggle("change");
             document.querySelector(".burgermenu").addEventListener("click", showStart);
         }
+
     </script>
 </body>
 

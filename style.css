@@ -283,6 +283,34 @@ header {
 
 }
 
+
+/*-------- koldkrig, besøg os ---------*/
+
+
+.indhold {
+    padding: 5vw;
+    line-height: 30px;
+
+}
+
+.indhold h2 {
+    font-size: 30px;
+    font-family: sans-serif, limeStone;
+
+}
+
+.indhold h3 {
+    font-size: 20px;
+    font-family: sans-serif, limeStone;
+}
+
+.indhold p {
+    font-size: 14px;
+    font-family: arial;
+}
+
+
+
 /*footer*/
 
 footer {
