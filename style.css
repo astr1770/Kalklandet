@@ -247,6 +247,9 @@ header {
 .menu {
     display: flex;
     justify-content: space-around;
+    padding: 15px;
+    font-family: sans-serif, limeStone;
+    background-color: aliceblue;
 }
 
 .menu a {
