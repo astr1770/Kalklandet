@@ -27,10 +27,10 @@
             <div class="burgermenu">
                 <div class="box hide">
                     <div class="ned_menu">
-                        <a href="#koldkrig">Koldkrigsmuseet</a>
+                        <a href="koldkrig.html">Koldkrigsmuseet</a>
                         <a href="#klint">Stevns Klint</a>
                         <a href="#kalkbrud">Goemuseet Faxe</a>
-                        <a href="#viden">Viden</a>
+                        <a href="viden.html">Viden</a>
                     </div>
                 </div>
                 <div class="bar1"></div>
@@ -54,14 +54,19 @@
         <a href="koldkrig_undervisning.html">Undervisning</a>
     </div>
 
-    <div class="priser">
+    <div class="aabningstider">
         <p></p>
     </div>
-
-    <div class="knap">
-
-        <img src="pics/book_knap.svg">
-
+    <br>
+    <div class="handicappet">
+        <p></p>
+    </div>
+<br>
+    <div class="find_vej">
+        <p></p>
+    </div>
+    <div class="om_koldkrigsmuseet">
+        <p></p>
     </div>
 
 
@@ -88,7 +93,32 @@
     </Footer>
 
     <script>
-        window.addEventListener("load", sidenVises);
+        let splash;
+        document.addEventListener("DOMContentLoaded", start);
+
+        function start() {
+
+            async function getJson() {
+                let url = "http://astridhostrup.dk/kea/07-cms/kalklandet/wp/wp-json/wp/v2/koldkrig_priser/200";
+                let jsonData = await fetch(url);
+                splash = await jsonData.json();
+                console.log(splash)
+                visSplash();
+            }
+
+            function visSplash() {
+                document.querySelector(".overskrift").textContent = splash.title.rendered;
+                document.querySelector(".splash").style.backgroundImage = "url(" + splash.koldkrigsmuseum_billede.guid + ")"
+                document.querySelector(".aabningstider p").textContent = splash.aabningstider;
+                document.querySelector(".handicappet p").textContent = splash.handicappet;
+                document.querySelector(".find_vej p").textContent = splash.find_vej;
+                document.querySelector(".om_koldkrigsmuseet p").textContent = splash.om_koldkrigsmuseet;
+
+            }
+
+            getJson();
+
+        }
 
         function sidenVises() {
             console.log("siden vises");

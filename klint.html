@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+
+<body>
+
+    <header>
+        <div class="left">
+            <div class="logo"></div>
+            <div class="tagline">
+                <a href="index.html">
+                    <p>- En del af Østsjællands Museum</p>
+                </a>
+            </div>
+        </div>
+        <div class="rigth">
+            <div class="search">
+                <p>Søg</p>
+            </div>
+            <div class="burgermenu">
+                <div class="box hide">
+                    <div class="ned_menu">
+                        <a href="koldkrig.html">Koldkrigsmuseet</a>
+                        <a href="#klint">Stevns Klint</a>
+                        <a href="#kalkbrud">Goemuseet Faxe</a>
+                        <a href="viden.html">Viden</a>
+                    </div>
+                </div>
+                <div class="bar1"></div>
+                <div class="bar2"></div>
+                <div class="bar3"></div>
+            </div>
+        </div>
+    </header>
+
+    <div class="splash">
+        <img src="" alt="">
+        <a href="koldkrig.html">
+            <div class="overskrift"></div>
+        </a>
+    </div>
+
+    <div class="menu">
+
+        <a href="koldkrig_besoeg.html">Besøg os</a>
+        <a href="koldkrig_priser.html">Priser og guidede ture</a>
+        <a href="koldkrig_undervisning.html">Undervisning</a>
+    </div>
+
+    <div class="om_koldkrigsmuseet">
+        <p></p>
+    </div>
+
+
+    <Footer>
+        <div class="kontakt">
+            <div>Østsjællands Museum <br>
+                Rådhusvej 2 <br>
+                4640 Faxe <br>
+                museum@oesm.dk <br>
+                +45 56502806 <br>
+                Telefontid: hverdage kl. 9-15
+            </div>
+            <div class="facebook"></div>
+            <div class="instagram"></div>
+        </div>
+        <div id="om_os">
+            <p>Om os</p>
+            <a href="historie">Historie</a>
+            <a href="hvem er vi">Hvem er vi?</a>
+            <a href="vores opgaver">Vores opgaver</a>
+            <a href="vores resultater">Vores resultater</a>
+            <a href="ledige stillinger">Ledige stillinger</a>
+        </div>
+    </Footer>
+
+    <script>
+        let splash;
+        document.addEventListener("DOMContentLoaded", start);
+
+        function start() {
+
+            async function getJson() {
+                let url = "http://astridhostrup.dk/kea/07-cms/kalklandet/wp/wp-json/wp/v2/koldkrigsmuseum/194";
+                let jsonData = await fetch(url);
+                splash = await jsonData.json();
+                console.log(splash)
+                visSplash();
+            }
+
+            function visSplash() {
+                document.querySelector(".overskrift").textContent = splash.title.rendered;
+                document.querySelector(".splash").style.backgroundImage = "url(" + splash.koldkrigsmuseum_billede.guid + ")"
+                document.querySelector(".om_koldkrigsmuseet p").textContent = splash.om_koldkrigsmuseet;
+
+            }
+
+            getJson();
+
+        }
+
+        function sidenVises() {
+            console.log("siden vises");
+            //Hvad der skal ske
+            showStart();
+        }
+
+        function showStart() {
+            console.log("burgermenu");
+            document.querySelector(".burgermenu").addEventListener("click", visMenu);
+
+        }
+
+        function visMenu() {
+            console.log("menufremme");
+            document.querySelector(".box").classList.toggle("hide");
+            document.querySelector(".burgermenu").classList.toggle("change");
+            document.querySelector(".burgermenu").addEventListener("click", showStart);
+        }
+    </script>
+</body>
+
+</html>
