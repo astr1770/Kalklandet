@@ -312,6 +312,11 @@ header {
     font-family: arial;
 }
 
+#map {
+    width: 80vw;
+    height: auto;
+}
+
 
 
 /*footer*/

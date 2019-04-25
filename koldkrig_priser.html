@@ -54,27 +54,7 @@
         <a href="koldkrig_undervisning.html">Undervisning</a>
     </div>
 
-    <div class="intro_tekst">
-        <p></p>
-    </div>
-    <br>
-    <div class="priser">
-        <p></p>
-    </div>
-    <br>
-    <div class="find_vej">
-        <p></p>
-    </div>
-    <div class="paa_egen_haand">
-        <p></p>
-    </div>
-    <br>
-    <div class="for_grupper">
-        <p></p>
-    </div>
-    <br>
-    <div class="sraelige_ture">
-        <p></p>
+    <div class="indhold">
     </div>
 
 
@@ -107,7 +87,7 @@
         function start() {
 
             async function getJson() {
-                let url = "http://astridhostrup.dk/kea/07-cms/kalklandet/wp/wp-json/wp/v2/koldkrig_priser/213";
+                let url = "http://astridhostrup.dk/kea/07-cms/kalklandet/wp/wp-json/wp/v2/pages/48";
                 let jsonData = await fetch(url);
                 splash = await jsonData.json();
                 console.log(splash)
@@ -115,14 +95,8 @@
             }
 
             function visSplash() {
-                document.querySelector(".overskrift").textContent = splash.title.rendered;
-                document.querySelector(".splash").style.backgroundImage = "url(" + splash.pris_billede.guid + ")"
-                document.querySelector(".intro_tekst p").textContent = splash.intro_tekst;
-                document.querySelector(".priser p").textContent = splash.priser;
-                document.querySelector(".ekstra_kommentar p").textContent = splash.ekstra_kommentar;
-                document.querySelector(".paa_egen_haand p").textContent = splash.paa_egen_haand;
-                document.querySelector(".for_grupper p").textContent = splash.for_grupper;
-                document.querySelector(".sraelige_ture p").textContent = splash.sraelige_ture;
+                document.querySelector(".indhold").innerHTML = splash.content.rendered;
+                document.querySelector(".overskrift").innerHTML = splash.title.rendered;
 
             }
 

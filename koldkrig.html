@@ -54,8 +54,7 @@
         <a href="koldkrig_undervisning.html">Undervisning</a>
     </div>
 
-    <div class="om_koldkrigsmuseet">
-        <p></p>
+    <div class="indhold">
     </div>
 
 
@@ -88,7 +87,7 @@
         function start() {
 
             async function getJson() {
-                let url = "http://astridhostrup.dk/kea/07-cms/kalklandet/wp/wp-json/wp/v2/koldkrig/250";
+                let url = "http://astridhostrup.dk/kea/07-cms/kalklandet/wp/wp-json/wp/v2/pages/10";
                 let jsonData = await fetch(url);
                 splash = await jsonData.json();
                 console.log(splash)
@@ -96,9 +95,11 @@
             }
 
             function visSplash() {
-                document.querySelector(".overskrift").textContent = splash.title.rendered;
+                document.querySelector(".overskrift").innerHTML = splash.title.rendered;
+                document.querySelector(".indhold").innerHTML = splash.content.rendered;
+
                 document.querySelector(".splash").style.backgroundImage = "url(" + splash.koldkrig_billede.guid + ")"
-                document.querySelector(".om_koldkrigsmuseet p").textContent = splash.kort_intro;
+
 
             }
 
