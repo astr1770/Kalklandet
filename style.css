@@ -8,7 +8,7 @@ body {
 }
 
 body {
-    background-color: #aaa6a2;
+    background-color: #ded9d5;
 }
 
 
@@ -92,9 +92,9 @@ h4 {
 .overskrift {
     align-self: center;
     font-size: 5rem;
-    color: white;
+    color: #8d8277;
     padding-top: 30vh;
-    font-family: sans-serif;
+    font-family: sans-serif, LimeStone;
 
 }
 
@@ -215,7 +215,7 @@ h4 {
     width: 100vw;
     height: 60vh;
     background-size: cover;
-    border: solid #8d8277 8px;
+    border: solid #ded9d5 8px;
 }
 
 .koldkrig:hover {
@@ -227,7 +227,7 @@ h4 {
     width: 100vw;
     height: 60vh;
     background-size: cover;
-    border: solid #8d8277 8px;
+    border: solid #ded9d5 8px;
 
 }
 
@@ -236,7 +236,7 @@ h4 {
     width: 100vw;
     height: 60vh;
     background-size: cover;
-    border: solid #8d8277 8px;
+    border: solid #ded9d5 8px;
 
 }
 
@@ -245,37 +245,37 @@ h4 {
     height: 70vh;
     background-size: cover;
     display: flex;
-    border: solid #8d8277 8px;
+    border: solid #ded9d5 8px;
 
 
 }
 
 .koldkrigsmuseum_overskrift {
     font-size: 2rem;
-    color: white;
-    padding: 53vh 0 0 2vw;
+    color: #377288;
+    padding: 50vh 0 0 2vw;
     font-family: sans-serif;
 }
 
 .klint_overskrift {
     font-size: 2rem;
-    color: white;
-    padding: 53vh 0 0 2vw;
+    color: #0082ad;
+    padding: 50vh 0 0 2vw;
     font-family: sans-serif;
 }
 
 .kalkbrud_overskrift {
     font-size: 2rem;
-    color: white;
-    padding: 53vh 0 0 2vw;
+    color: #1ba6a2;
+    padding: 50vh 0 0 2vw;
     font-family: sans-serif;
 }
 
 .viden_overskrift {
     align-self: center;
     font-size: 4rem;
-    color: white;
-    padding: 60vh 0 0 2vw;
+    color: #88b42d;
+    padding: 55vh 0 0 2vw;
     font-family: sans-serif;
 }
 
@@ -303,18 +303,18 @@ h4 {
 
     .kalkbrud {
         display: flex;
-        border: solid #8d8277 6px;
+        border: solid #ded9d5 6px;
         margin-right: 3px;
     }
 
     .klint {
         display: flex;
-        border: solid #8d8277 6px;
+        border: solid #ded9d5 6px;
     }
 
     .koldkrig {
         display: flex;
-        border: solid #8d8277 6px;
+        border: solid #ded9d5 6px;
         margin-left: 3px;
     }
 
@@ -419,7 +419,7 @@ h4 {
 /*footer*/
 
 footer {
-    background-color: ##aaa6a2;
+    background-color: #ded9d5;
     display: flex;
     justify-content: space-between;
     padding: 5vw;
