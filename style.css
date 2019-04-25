@@ -1,20 +1,37 @@
 /*basic*/
-* {
+*,
+html,
+body {
+    box-sizing: border-box;
     margin: 0;
 
 }
+
+body {
+    background-color: #8d8277;
+}
+
 
 img {}
 
 a {
     text-decoration: none;
     color: black;
+    font-family: sans-serif, LimeStone;
 }
 
-/*header*/
+p,
+h1,
+h2,
+h3,
+h4 {
+    font-family: sans-serif, LimeStone;
+}
+
+/*------------header-----------*/
 .logo {
-    background-image: url(pics/logo.png);
-    width: 50px;
+    background-image: url(pics/K_kalklandet_cmyk.png);
+    width: 70px;
     height: 10vh;
     background-size: contain;
     background-repeat: no-repeat;
@@ -28,23 +45,60 @@ a {
     margin-top: 3vh;
 }
 
+.tagline p {
+    color: #8d8277;
+}
+
 .rigth {
     display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+
 }
 
-header {
+#header {
     display: flex;
     justify-content: space-between;
-    background-color: #5d5d5d;
-    padding: 10px;
+    position: absolute;
+    padding: 2vw 2vw 0 2vw;
+    width: 100vw;
 }
 
+/*
 .search {
     padding: 10px 10px 0 0;
     border-color: black;
     border: 2px;
 
 }
+
+.search p {
+    color: #8d8277;
+}
+*/
+
+/*--------splash billede-------*/
+
+
+.splash {
+    display: flex;
+    width: 100vw;
+    justify-content: center;
+    height: 90vh;
+    background-size: cover;
+    margin-bottom: 6px;
+}
+
+.overskrift {
+    align-self: center;
+    font-size: 5rem;
+    color: white;
+    padding-top: 30vh;
+    font-family: sans-serif;
+
+}
+
+
 
 /*-------brugermenu--------*/
 
@@ -59,12 +113,11 @@ header {
     flex-wrap: wrap;
     width: 35px;
     height: 5px;
-    background-color: #000000;
+    background-color: #8d8277;
     margin: 6px 0;
     transition: 0.4s;
 
 }
-
 
 .change .bar1 {
     transform: rotate(-45deg) translate(-9px, 6px);
@@ -83,8 +136,6 @@ header {
 }
 
 .box {
-    position: absolute;
-    justify-content: flex-end;
     height: 200px;
     width: 200px;
     background-color: rgba(255, 255, 255, 0.88);
@@ -95,7 +146,6 @@ header {
     display: flex;
     flex-direction: column;
     align-items: flex-end;
-    margin: 5vw;
 
 }
 
@@ -114,26 +164,9 @@ header {
 
 .burgermenu {
     cursor: pointer;
-}
-
-/*splash billede*/
+    margin-left: 170px;
 
 
-.splash {
-    display: flex;
-    background-color: gainsboro;
-    width: 100vw;
-    justify-content: center;
-    height: 90vh;
-    background-size: cover;
-}
-
-.overskrift {
-    align-self: center;
-    font-size: 5rem;
-    color: white;
-    padding-top: 30vh;
-    font-family: sans-serif;
 
 }
 
@@ -142,34 +175,39 @@ header {
 
 .koldkrig {
     display: flex;
-    background-color: #bababa;
     width: 100vw;
     height: 60vh;
     background-size: cover;
+    border: solid #8d8277 8px;
+
+
 }
 
 .klint {
     display: flex;
-    background-color: #bababa;
     width: 100vw;
     height: 60vh;
     background-size: cover;
+    border: solid #8d8277 8px;
+
 }
 
 .kalkbrud {
     display: flex;
-    background-color: #bababa;
     width: 100vw;
     height: 60vh;
     background-size: cover;
+    border: solid #8d8277 8px;
+
 }
 
 .viden {
-    background-color: #bababa;
     width: 100vw;
     height: 70vh;
     background-size: cover;
     display: flex;
+    border: solid #8d8277 8px;
+
 
 }
 
@@ -202,26 +240,45 @@ header {
     font-family: sans-serif;
 }
 
+#forsidemenu {
+    justify-content: space-around;
+}
+
 /* media desktop*/
 
 @media only screen and (min-width:725px) {
 
+    .splash {
+        display: flex;
+        width: 100vw;
+        justify-content: center;
+        height: 90vh;
+        background-size: cover;
+        margin-bottom: 3px;
+    }
+
     #forsidemenu {
         display: flex;
-        justify-content: space-around
+        justify-content: space-around;
     }
 
     .kalkbrud {
         display: flex;
+        border: solid #8d8277 6px;
+        margin-right: 3px;
     }
 
     .klint {
         display: flex;
+        border: solid #8d8277 6px;
     }
 
     .koldkrig {
         display: flex;
+        border: solid #8d8277 6px;
+        margin-left: 3px;
     }
+
 
 }
 
@@ -230,11 +287,13 @@ header {
     display: flex;
     justify-content: space-between;
     padding: 2vw;
+
 }
 
 .kasse {
     width: 100vw;
     height: 40vh;
+
 }
 
 .kulturhistorie_billede {
@@ -322,7 +381,7 @@ header {
 /*footer*/
 
 footer {
-    background-color: #5d5d5d;
+    background-color: #8d8277;
     display: flex;
     justify-content: space-between;
     padding: 5vw;

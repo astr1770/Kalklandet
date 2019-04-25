@@ -42,17 +42,16 @@
 
     <div class="splash">
         <img src="" alt="">
-        <a href="viden.html">
+        <a href="faxe.html">
             <div class="overskrift"></div>
         </a>
     </div>
 
     <div class="menu">
 
-        <a href="den_kolde_krig.html">Den kolde krig</a>
-        <a href="den_levende_natur.html">Den levende natur</a>
-        <a href=".kalkens_geologi.html">Kalkens Geologi</a>
-        <a href=".kalkens_kulturhistorie.html">Kalkens kulturhistorie</a>
+        <a href="faxe_besoeg.html">Besøg os</a>
+        <a href="faxe_priser.html">Priser og guidede ture</a>
+        <a href="faxe_undervisning.html">Undervisning</a>
     </div>
 
     <div class="indhold">
@@ -88,7 +87,7 @@
         function start() {
 
             async function getJson() {
-                let url = "http://astridhostrup.dk/kea/07-cms/kalklandet/wp/wp-json/wp/v2/pages/52";
+                let url = "http://astridhostrup.dk/kea/07-cms/kalklandet/wp/wp-json/wp/v2/pages/47";
                 let jsonData = await fetch(url);
                 splash = await jsonData.json();
                 console.log(splash)
@@ -98,7 +97,7 @@
             function visSplash() {
                 document.querySelector(".overskrift").innerHTML = splash.title.rendered;
                 document.querySelector(".indhold").innerHTML = splash.content.rendered;
-                document.querySelector(".splash").style.backgroundImage = "url(" + splash.koldkrigsmuseum_billede.guid + ")"
+                //                document.querySelector(".splash").style.backgroundImage = "url(" + splash.koldkrigsmuseum_billede.guid + ")"
 
 
             }
